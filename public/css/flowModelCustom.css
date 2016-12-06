@@ -1,0 +1,446 @@
+body {
+    /*Overall font-size defined*/
+    font-family: Arial, Helvetica;
+    font-size: 14px;
+}
+
+#flowContainer {
+    /*Background image of interactive*/
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    width: 420px;
+    height: 620px;
+    background-repeat: no-repeat;
+    background-image: url('../images/poolFlow.png');
+}
+
+#treePool {
+    /*tree pool container*/
+    background: #ebf8ca;
+    box-shadow: 0 0 10px 5px #ebf8ca;
+    margin: auto;
+    position: absolute;
+    top: -21px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+    width: 130px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.treePosition {
+    position: absolute;
+    top: 104px;
+    left: 5px;
+    width: 418px;
+    height: 200px;
+    display: block;
+    justify-content: center;
+}
+
+.soilPosition {
+    z-index: 1 !important;
+    position: absolute;
+    top: 384px;
+    left: 5px;
+    width: 418px;
+    height: 200px;
+    display: block;
+    justify-content: center;
+}
+
+#soilPool {
+    /*soil pool container*/
+    z-index: 0;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 211px;
+    height: 90px;
+    background: rgb(68, 27, 0);
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 0 0 10px 5px rgb(68, 27, 0);
+}
+
+#timeElapsed {
+    /*years container*/
+    position: absolute;
+    background: rgba(255, 255, 255, .8);
+    top: 12px;
+    right: 20px;
+    text-align: center;
+    display: block;
+    width: 185px;
+    height: 35px;
+    margin: 0 auto 0 auto;
+    border: solid 1px #2e5e73;
+    border-radius: 7px;
+    color: #2e5e73;
+}
+
+#timeElapsed span {
+    display: inline-block;
+    float: left;
+    padding: 10px;
+    text-align: left;
+}
+
+#year {
+    /*year value span*/
+    padding: 0 0 0 5px !important;
+    float: right !important;
+    font-weight: bolder;
+}
+
+#tree /*containers for tree/soil value readouts*/ {
+    z-index: 20;
+    position: absolute;
+    left: 109px;
+    top: 41px;
+    background: #367300;
+    color: #fff;
+    padding: 10px;
+    border-radius: 7px;
+    width: 28px;
+    height: 15px;
+    border: solid 2px white;
+    text-align: center;
+}
+
+#soil {
+    z-index: 20;
+    position: absolute;
+    left: 110px;
+    bottom: 65px;
+    background: #7d2e17;
+    color: #fff;
+    padding: 10px;
+    border-radius: 7px;
+    height: 15px;
+    width: 28px;
+    border: solid 2px white;
+    text-align: center;
+}
+
+.controlContainer {
+    /*positioning for start/reset buttons*/
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+    right: 0;
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+}
+
+.treepoolHeader {
+    margin: 20px 0 0 -2px !important;
+    color: #fff;
+    font-size: 11px;
+    text-align: left;
+    font-weight: bolder;
+}
+
+.optionHeader {
+    color: #fff;
+    font-size: 11px;
+    text-align: left;
+    margin: 20px 0 !important;
+    font-weight: bolder;
+}
+
+.optionHeaderDark {
+    text-shadow: 0 0 5px #fff;
+    color: #000000;
+    font-size: 11px;
+    text-align: left;
+    margin: 20px 0 !important;
+    font-weight: bolder;
+}
+
+#flowIncr,
+#decompInc {
+    /*button positioning/style*/
+    float: left;
+    margin: -9px 0 0 4px;
+}
+
+#flowIncr {
+    /*button positioning/style*/
+}
+
+.flowIncrContain {
+    z-index: 1000;
+    height: 51px;
+    width: 48px;
+    font-size: 14px;
+    position: absolute;
+    padding: 5px 0;
+    top: 20px;
+    left: 14px;
+    right: 0;
+    text-align: center;
+    border-radius: 7px;
+}
+
+.selectContainDark2 {
+    background: #ea5600;
+    padding: 5px 0;
+    margin: 7px 0 0 28px;
+    border-radius: 5px;
+    width: 44px!important;
+    font-weight: bolder;
+}
+
+.selectContain {
+    background: #63a941;
+    padding: 13px 0;
+    margin: 7px 0 0 -2px;
+    border-radius: 5px;
+    width: 45px!important;
+}
+
+.selectContain2 {
+    background: #63a941;
+    padding: 13px 0;
+    margin: 7px 0 0 -2px;
+    border-radius: 5px;
+    width: 61px!important;
+}
+
+.selectContainRev {
+    background: #63a941;
+    padding: 4px 0;
+    margin: 7px 0 0 7px;
+    border-radius: 5px;
+    width: 50px!important;
+}
+
+.selectContainDark {
+    background: #ea5600;
+    padding: 4px 0;
+    margin: 12px 0 7px -8px;
+    border-radius: 5px;
+    width: 50px!important;
+}
+
+.dentContain {
+    z-index: 1000;
+    height: 45px;
+    width: 60px;
+    font-size: 14px;
+    position: absolute;
+    padding: 5px 0;
+    bottom: 205px;
+    right: 55px;
+    text-align: center;
+    border-radius: 7px;
+
+}
+
+.decompContain {
+    z-index: 1000;
+    height: 45px;
+    width: 60px;
+    font-size: 14px;
+    position: absolute;
+    padding: 5px 0;
+    top: 85px;
+    left: 117px;
+    right: 0;
+    text-align: center;
+    border-radius: 7px;
+}
+
+.uptakeContain {
+    z-index: 1000;
+    height: 45px;
+    width: 60px;
+    font-size: 14px;
+    position: absolute;
+    padding: 5px 0;
+    top: 406px;
+    left: 267px;
+    right: 0;
+    text-align: center;
+    border-radius: 7px;
+}
+
+button {
+    /*button styles*/
+    font-size: 14px !important;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 0 2px;
+    border: 1px solid #aeaeae;
+}
+
+button:hover {
+    /*button states*/
+    background: #dadada;
+}
+
+#flowIncrArrow {
+    /*flowIncr line*/
+    position: absolute;
+    display: none;
+    top: 55px;
+    left: 37px;
+    height: 427px;
+    width: 54px;
+    border-bottom-left-radius: 8px;
+    border-left: 1px dotted #63a941;
+    border-bottom: 1px dotted #63a941;
+}
+
+#dentrArrow {
+    display: none;
+    z-index: 0;
+    position: absolute;
+    top: 102px;
+    right: 29px;
+    height: 380px;
+    width: 110px;
+    border-bottom-right-radius: 8px;
+    border-right: 1px dotted #ea5600;
+    border-bottom: 1px dotted #ea5600;
+}
+
+select {
+    border-radius: 3px;
+}
+
+#arrowRight {
+    position: absolute;
+    display: none;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: -12px;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 12px solid #63a941;
+}
+
+#arrowUp2 {
+    display: none;
+    position: absolute;
+    margin: auto;
+    top: 90px;
+    right: 19px;
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 15px solid #ea5600;
+}
+
+#arrowDown {
+    display: none;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 71px;
+    left: -71px;
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 15px solid #63a941;
+}
+
+#arrowUp {
+    display: none;
+    position: absolute;
+    margin: auto;
+    bottom: 5px;
+    left: 68px;
+    right: -70px;
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 15px solid #ea5600;
+}
+
+#uptakeArrow {
+    position: absolute;
+    border-right: dotted #ea5600;
+    top: 118px;
+    right: 137px;
+    left: -136px;
+    height: 204px;
+}
+
+#decompArrow {
+    display: none;
+    position: absolute;
+    border-right: dotted #63a941;
+    top: 241px;
+    left: 137px;
+    height: 195px;
+}
+
+​,
+.soilTitle {
+    font-size: 13px;
+    color: #fff;
+    position: absolute;
+    bottom: 110px;
+    left: 175px;
+    z-index: 1000;
+    font-weight: bolder;
+}
+
+.treeTitle {
+    font-size: 13px;
+    font-weight: bolder;
+    z-index: 1000;
+    position: absolute;
+    top: 159px;
+    left: 170px;
+    text-shadow: 0 0 5px #fff;
+}
+
+span.glyphicons:before {
+    font-size: 13px;
+}
+
+button:disabled span.glyphicons:before {
+    color: graytext;
+}
+
+span.glyphicons.plus {
+    padding-left: 18px;
+    margin: -16px 0 0 0;
+}
+
+span.glyphicons.restart {
+    padding-left: 20px;
+    margin: -16px 0 0 0;
+}
+
+.meterPosition {
+    position:absolute;
+    left:105px;
+    top:80px;
+    z-index:1000;
+}
+
+.meter2Position {
+    position:absolute;
+    left:106px;
+    top:26px;
+    z-index:1000;
+}
+
+

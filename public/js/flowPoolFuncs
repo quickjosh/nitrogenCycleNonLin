@@ -1,0 +1,49 @@
+//Uptake equation:
+//soilNitro - (value * 10)
+//treeNitro + (value * 10)
+
+//Decomposition equation:
+//soilNitro + (value * 10)
+//treeNitro - (value * 10)
+
+//Dentrification equation:
+//soilNitro - (value * 10)
+
+//Fixation equation:
+//soilNitro + (value * 10)
+
+//function flowMaker() {//Button for increasing fixation
+//    var fix = document.getElementById("flowIncr").value;//Points to value for options
+//    soilNum += ((fix / .5) - 3) * 5;//Equation for amount of soil nitrogen using fix values
+//    years += 10;//Value for year incrementer
+//    trees += 10;//Value for tree incrementer
+//    render();
+//    years === 100 ? (document.getElementById("10years").disabled = true) : false;//Disables button at value 50years
+//    var padding = treePool.style.padding;//Increases padding for tree pool
+//    padding = Number(padding.slice(0, padding.length - 2));
+//    treePool.style.padding = (padding + 2) + 'px';
+//}
+
+
+
+function flowPoolNums () {
+    var fixValue = document.getElementById("flowIncr").value;//Points to value for options
+    var dentValue = document.getElementById("dentInc").value;//Points to value for options
+    var uptakeValue = document.getElementById("uptakeInc").value;//Points to value for options
+    var decompValue = document.getElementById("decompInc").value;//Points to value for options
+
+    var treeNumber = document.getElementById("tree").innerHTML;
+
+    var soilNumber = document.getElementById("soil").innerHTML;
+    var yearNumber = document.getElementById("year").innerHTML;
+
+    //soilNumber -= ((uptakeValue * 10) + (dentValue * 10));
+    //soilNumber += ((fixValue * 10) + (decompValue * 10));
+    //treeNumber -= (decompValue * 10);
+    //treeNumber += (uptakeValue * 10);
+
+    soilNumber += ((fixValue * 10) + (decompValue * 10)) - ((uptakeValue * 10) + (dentValue * 10));
+    treeNumber += ((uptakeValue * 10) - (decompValue * 10));
+}
+
+

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flow Pool Model</title>
+    <link rel="stylesheet" type="text/css" href="css/flowModelCustom.css">
+    <link rel="stylesheet" type="text/css" href="css/glyphicons.css">
+    <!--<script-->
+            <!--src="https://code.jquery.com/jquery-3.1.1.js"-->
+            <!--integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="-->
+            <!--crossorigin="anonymous"></script>-->
+</head>
+<body>
+<div id="flowContainer">
+    <div class="flowIncrContain">
+        <span class="optionHeaderDark">Fixation</span>
+        <div class="selectContain2">
+    <select id="flowIncr">
+    </select>
+    </div>
+    </div>
+    <div id="timeElapsed">
+        <span>Time Elapsed (Year):<span id='year'>0</span></span>
+    </div>
+    <span class="treeTitle">TREE NITROGEN</span>
+    <div class= "treePosition"><img class="meter2Position" src="images/treeMeter.png" alt="tree meter" height="28" width="10">
+        <div class="decompContain">
+            <span class="optionHeaderDark">Decomposition</span>
+            <div class="selectContain">
+            <select id="decompInc">
+            </select>
+            </div>
+        </div>
+        <div id='tree'>60</div>
+        <div id="uptakeArrow"></div>
+    <div id="treePool">
+        <div id="arrowUp"></div>
+
+    </div>
+    </div>
+    <div id="flowIncrArrow">
+        <!--<span class="glyphicons chevron-right"></span>-->
+    </div>
+
+    <div class="dentContain">
+        <span class="optionHeader" >Dentrification</span>
+        <div class="selectContainDark2">
+            <select id="dentInc">
+            </select>
+        </div>
+    </div>
+    <div id="decompArrow">
+    </div>
+    <div class="uptakeContain">
+        <div class="selectContainDark">
+            <select id="uptakeInc">
+            </select>
+
+        </div>
+        <span class="optionHeader" style="margin:0 0 0 -35px!important">Uptake</span>
+    </div>
+    <span class="soilTitle">SOIL NITROGEN</span>
+    <div class="soilPosition">
+        <img class="meterPosition" src="images/soilMeter.png" alt="soil meter" height="28" width="10">
+        <div id='soil'>120</div>
+    <div id="soilPool">
+
+        <span id="arrowRight"></span>
+        <span id="arrowDown"></span>
+
+    </div>
+    </div>
+    <div class="controlContainer">
+    <button id='10years' onClick="flowMaker()"><span class="glyphicons plus"></span>10 Years</button>
+    <button id='reset' onClick="resetValue()"><span class="glyphicons restart"> </span>Reset</button>
+    </div>
+    <div id="dentrArrow"></div>
+    <span id="arrowUp2"></span>
+</div>
+
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>-->
+<script src="js/valueAdjusters.js"></script>
+<script src="js/fluxInteractive.js"></script>
+
+</body>
+</html>
