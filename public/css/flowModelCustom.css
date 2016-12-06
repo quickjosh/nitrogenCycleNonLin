@@ -443,4 +443,18 @@ span.glyphicons.restart {
     z-index:1000;
 }
 
+#nitroSoilFull {
+    position:absolute;
+    left:62px;
+    top:394px;
+    z-index:0;
+}
+
+#nitroTreeFull {
+    position:absolute;
+    left:62px;
+    top:64px;
+    z-index:0;
+}
+
 

@@ -52,18 +52,21 @@ function render() {//created to stop redundancy in the resetValue function
     document.getElementById("tree").innerHTML = trees;
     document.getElementById("year").innerHTML = years;
     document.getElementById("soil").innerHTML = soilNum;
-
-    var BETA = 4;
-    var ALPHA = 2;
-    //ALPHA * Math.log(BETA * (fixWidth + 2));
-    soilPool.style.padding = Math.round(ALPHA * Math.log(BETA * (2))) + 'px';//
-    treePool.style.padding = Math.round(ALPHA * Math.log(BETA * (fixWidth + 2))) + 'px';//
+    soilPool.style.padding = Math.round(soilNum/30 + 10) + 'px';//
+    treePool.style.padding = Math.round(trees/10 + 10) + 'px';//
     if (soilNum>=590) {
         document.getElementById("soilPool").style.padding = "30px";
+        document.getElementById("nitroSoilFull").style.display = "block";
+    }
+    else {
+        document.getElementById("nitroSoilFull").style.display = "none";
     }
 
     if (trees>=660) {
         document.getElementById("treePool").style.padding = "76px";
+        document.getElementById("nitroTreeFull").style.display = "block";
+    } else {
+        document.getElementById("nitroTreeFull").style.display = "none";
     }
 
 }
@@ -88,7 +91,6 @@ function resetValue() {//resets value for years, trees soil and padding.
     window.onLoad = uptakeFlow();
     window.onLoad = dentrificationFlow();
     window.onLoad = selectFlow();
-    render();
 }
 
 document.addEventListener("change", selectFlow);
@@ -127,11 +129,7 @@ function dentrificationFlow() {
     arrowUp2.style.right = "";
 
         var fixWidth = normalizers.dent(document.getElementById("dentInc").value);
-        var widthNum = 8 * fixWidth////non-linear equation for line width
-
-        var BETA = 4;
-        var ALPHA = 2;
-    ALPHA * Math.log(BETA * (fixWidth + 2));
+        var widthNum = 8 * fixWidth//ALPHA * Math.log(BETA * (fixWidth + 2));//non-linear equation for line width
 
 
     var borderRight = dentrArrow.style.borderRightWidth;//Increases stroke width right
